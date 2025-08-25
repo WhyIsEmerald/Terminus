@@ -1,4 +1,4 @@
-package internals
+package calculator
 
 func ShuntingYard(tokens []Token) []Token {
 	stack := NewStack()

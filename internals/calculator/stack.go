@@ -1,4 +1,4 @@
-package internals
+package calculator
 
 type Stack struct {
 	items []Token
