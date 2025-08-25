@@ -1,23 +1,33 @@
 # Terminus
 
-**Terminus** is a fast, minimal, terminal-based utility suite built in Go. It’s a collection of small but powerful tools packed into a sleek TUI interface — built for productivity lovers, sysadmins, and terminal enthusiasts.
+[![Go Report Card](https://goreportcard.com/badge/github.com/WhyIsEmerald/terminus)](https://goreportcard.com/report/github.com/WhyIsEmerald/terminus)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Go Version](https://img.shields.io/github/go-mod/go-version/WhyIsEmerald/terminus)
+![Build](https://img.shields.io/github/actions/workflow/status/WhyIsEmerald/terminus/go.yml?branch=main)
+![Issues](https://img.shields.io/github/issues/WhyIsEmerald/terminus)
+![Stars](https://img.shields.io/github/stars/WhyIsEmerald/terminus?style=social)
 
-<!-- ![Terminus Screenshot](screenshot.png)  Optional: replace with actual screenshot -->
-
----
-
-## ✨ Features
-
-- 📁 File utilities (inspect, search, batch rename, etc.)
-- 🧮 Developer helpers (JSON viewer, base64 encoder/decoder, UUID generator, etc.)
-- 🕹 Interactive terminal UI — no mouse needed
-- 🧩 Modular structure: easy to add your own tools
+**Terminus** is a collection of small, handy utility apps bundled into a single Go-powered terminal tool.  
+Think of it as your Swiss Army knife for the command line — fast, minimal, and always available.
 
 ---
 
-## 🛠 Installation
+## ​ Features
 
-### Via `go install` (requires Go 1.21+)
+- 🧮 **Calculator** – Fast arithmetic and scientific calculations.  
+- 💱 **Currency Converter** – Fetches live exchange rates.  
+- 📅 **Date & Time Tools** – Format, convert, and manipulate dates.  
+- 🔢 **Unit Converter** – Convert between metric, imperial, and more.  
+- 🗂️ **File Utilities** – Quick file info, size conversions, and more.  
+- More tiny terminal tools coming soon...
+
+---
+
+## ​ Installation
+
+Make sure you have **Go 1.20+** installed.
 
 ```bash
-go install github.com/WhyIsEmerald/Terminus@latest
+git clone https://github.com/WhyIsEmerald/Terminus.git
+cd Terminus
+go build -o terminus
