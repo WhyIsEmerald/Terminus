@@ -14,7 +14,7 @@ type Operator struct {
 	OperandCount  int
 }
 
-var operators = map[string]Operator{ // Use Operator struct as the value type
+var operators = map[string]Operator{
 	"+": {Precedence: 1, Associativity: "left", Operation: func(x, y float64) (float64, error) { return x + y, nil }, OperandCount: 2},
 	"-": {Precedence: 1, Associativity: "left", Operation: func(x, y float64) (float64, error) { return x - y, nil }, OperandCount: 2},
 	"*": {Precedence: 2, Associativity: "left", Operation: func(x, y float64) (float64, error) { return x * y, nil }, OperandCount: 2},
