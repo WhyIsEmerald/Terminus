@@ -2,7 +2,7 @@ module github.com/WhyIsEmerald/Terminus
 
 go 1.24.4
 
-replace github.com/WhyIsEmerald/Terminus => /home/whyisemerald/Code/Terminus
+replace github.com/WhyIsEmerald/Terminus => ./
 
 require github.com/urfave/cli/v2 v2.27.7
 
