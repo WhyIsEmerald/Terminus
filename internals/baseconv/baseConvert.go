@@ -29,7 +29,6 @@ func BaseConvert(number string, fromBase, toBase int) (string, error) {
 		value /= int64(toBase)
 	}
 
-	
 	runes := []rune(result.String())
 	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
 		runes[i], runes[j] = runes[j], runes[i]
