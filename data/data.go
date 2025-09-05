@@ -6,6 +6,7 @@ import (
 	"fmt"
 )
 
+//go:embed all:measurements
 var content embed.FS
 var possibleMeasurements []string = []string{
 	"absorbed-dose",
