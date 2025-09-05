@@ -8,6 +8,7 @@ import (
 
 	"github.com/WhyIsEmerald/Terminus/internals/baseconv"
 	"github.com/WhyIsEmerald/Terminus/internals/calculator"
+	"github.com/WhyIsEmerald/Terminus/internals/units"
 	"github.com/urfave/cli/v2"
 )
 
@@ -71,6 +72,49 @@ func main() {
 
 					fmt.Println(result)
 					return nil
+				},
+			},
+			{
+				Name:    "UnitConv",
+				Aliases: []string{"u", "uc"},
+				Action: func(c *cli.Context) error {
+					if c.NArg() > 0 {
+						return fmt.Errorf("unexpected arguments: %v. Did you forget to quote an argument with spaces?", c.Args().Slice())
+					}
+					measurement := c.String("measurement")
+					fromUnit := c.String("from")
+					toUnit := c.String("to")
+					value := c.Float64("value")
+
+					units.Convert(measurement, fromUnit, toUnit, value)
+
+					return nil
+				},
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:     "measurement",
+						Aliases:  []string{"m"},
+						Usage:    "The measurement to convert",
+						Required: true,
+					},
+					&cli.StringFlag{
+						Name:     "from",
+						Aliases:  []string{"f"},
+						Usage:    "The unit to convert from",
+						Required: true,
+					},
+					&cli.StringFlag{
+						Name:     "to",
+						Aliases:  []string{"t"},
+						Usage:    "The unit to convert to",
+						Required: true,
+					},
+					&cli.Float64Flag{
+						Name:     "value",
+						Aliases:  []string{"v"},
+						Usage:    "The value to convert",
+						Required: true,
+					},
 				},
 			},
 		},
